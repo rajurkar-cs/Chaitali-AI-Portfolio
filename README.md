@@ -1,1 +1,1 @@
-# chaitali-ai-portfolio
+# Chaitali-AI-Portfolio
