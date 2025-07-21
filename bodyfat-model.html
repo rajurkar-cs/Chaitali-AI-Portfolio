@@ -6,7 +6,65 @@
   <title>Body Fat Prediction using Linear Regression</title>
 </head>
 <body>
-  <h1>Body Fat Prediction using Linear Regression</h1>
-  <p>Coming soon: This artifact showcases how linear regression can predict body fat percentage using features like weight and abdomen circumference. It involves data preprocessing, outlier handling, and model evaluation.</p>
+  <h1>Predicting Body Fat Using Linear Regression</h1>
+
+  <h2>Overview</h2>
+  <p>
+    This project uses linear regression to predict body fat percentage based on two key features: weight and abdomen circumference. The process included data visualization, outlier detection/removal, model training, and performance evaluation.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <p>
+    Estimating body fat accurately is important in the health and fitness fields. Traditional methods can be invasive or expensive. This project explores a simple machine learning approach using basic physical measurements to make body fat predictions.
+  </p>
+
+  <h2>Tools Used</h2>
+  <ul>
+    <li>Python (Jupyter Notebook)</li>
+    <li>Pandas, NumPy</li>
+    <li>Matplotlib, Seaborn</li>
+    <li>Scikit-learn (Linear Regression)</li>
+  </ul>
+
+  <h2>Process</h2>
+  <ol>
+    <li><strong>Exploratory Data Analysis:</strong> Plotted weight and abdomen vs. body fat to understand patterns.</li>
+    <li><strong>Outlier Detection:</strong> Identified extreme outliers using IQR method and visual plots.</li>
+    <li><strong>Model Building:</strong> Used weight and abdomen as features (X) and body fat as the target (y).</li>
+    <li><strong>Model Evaluation:</strong> Compared performance before and after removing outliers using metrics like MAE, MSE, RMSE, and R².</li>
+    <li><strong>Visualization:</strong> Plotted Actual vs Predicted body fat to visualize model fit.</li>
+  </ol>
+
+  <h2>Model Performance</h2>
+  <p><strong>Before Outlier Removal:</strong></p>
+  <ul>
+    <li>MAE: 3.33</li>
+    <li>MSE: 17.98</li>
+    <li>RMSE: 4.24</li>
+    <li>R²: 0.613</li>
+  </ul>
+  <p><strong>After Outlier Removal:</strong></p>
+  <ul>
+    <li>MAE: 3.43</li>
+    <li>MSE: 18.36</li>
+    <li>RMSE: 4.28</li>
+    <li>R²: 0.605</li>
+  </ul>
+  <p>
+    Surprisingly, removing outliers slightly worsened the model performance. This highlights the importance of examining the effect of data cleaning on model outcomes.
+  </p>
+
+  <h2>Value</h2>
+  <p>
+    This project demonstrates practical skills in data cleaning, visualization, regression modeling, and performance interpretation. It also illustrates critical thinking about when cleaning may or may not help.
+  </p>
+
+  <h2>Reflection</h2>
+  <p>
+    I gained hands-on experience in handling real-world data challenges like noisy features and outliers. Even though model accuracy didn’t improve, I understood how model diagnostics and visual inspection are essential to trust predictions.
+  </p>
+
+  <h2>Tags</h2>
+  <p><em>#MachineLearning #Regression #DataCleaning #Python #LinearModel #EDA</em></p>
 </body>
 </html>
