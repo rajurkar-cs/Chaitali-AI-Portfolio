@@ -3,68 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Body Fat Prediction using Linear Regression</title>
+  <title>Artifact 2: Body Fat Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Predicting Body Fat Using Linear Regression</h1>
+<body class="bg-gray-100 text-gray-800 p-6">
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
+    <h1 class="text-2xl font-bold text-blue-700 mb-4">Artifact 2: Body Fat Prediction using Linear Regression</h1>
 
-  <h2>Overview</h2>
-  <p>
-    This project uses linear regression to predict body fat percentage based on two key features: weight and abdomen circumference. The process included data visualization, outlier detection/removal, model training, and performance evaluation.
-  </p>
+    <p class="mb-4">
+      This project applies linear regression to predict body fat percentage using weight and abdomen circumference. The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.
+    </p>
 
-  <h2>Problem Statement</h2>
-  <p>
-    Estimating body fat accurately is important in the health and fitness fields. Traditional methods can be invasive or expensive. This project explores a simple machine learning approach using basic physical measurements to make body fat predictions.
-  </p>
+    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Process Overview</h2>
+    <ul class="list-disc list-inside space-y-1 mb-4">
+      <li><strong>EDA:</strong> Explored data patterns using scatterplots.</li>
+      <li><strong>Outlier Detection:</strong> Used boxplots and IQR to detect/remove extreme values.</li>
+      <li><strong>Modeling:</strong> Built linear regression using abdomen and weight as features.</li>
+      <li><strong>Evaluation:</strong> Compared model before and after outlier removal using MAE, RMSE, and R².</li>
+    </ul>
 
-  <h2>Tools Used</h2>
-  <ul>
-    <li>Python (Jupyter Notebook)</li>
-    <li>Pandas, NumPy</li>
-    <li>Matplotlib, Seaborn</li>
-    <li>Scikit-learn (Linear Regression)</li>
-  </ul>
+    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Model Results</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="min-w-full table-auto border border-gray-300">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2 text-left border-b border-gray-300">Metric</th>
+            <th class="px-4 py-2 text-left border-b border-gray-300">With Outliers</th>
+            <th class="px-4 py-2 text-left border-b border-gray-300">After Removing Outliers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-300">MAE</td>
+            <td class="px-4 py-2 border-b border-gray-300">3.33</td>
+            <td class="px-4 py-2 border-b border-gray-300">3.43</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border-b border-gray-300">MSE</td>
+            <td class="px-4 py-2 border-b border-gray-300">17.98</td>
+            <td class="px-4 py-2 border-b border-gray-300">18.36</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-300">RMSE</td>
+            <td class="px-4 py-2 border-b border-gray-300">4.24</td>
+            <td class="px-4 py-2 border-b border-gray-300">4.28</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border-b border-gray-300">R²</td>
+            <td class="px-4 py-2 border-b border-gray-300">0.613</td>
+            <td class="px-4 py-2 border-b border-gray-300">0.605</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <h2>Process</h2>
-  <ol>
-    <li><strong>Exploratory Data Analysis:</strong> Plotted weight and abdomen vs. body fat to understand patterns.</li>
-    <li><strong>Outlier Detection:</strong> Identified extreme outliers using IQR method and visual plots.</li>
-    <li><strong>Model Building:</strong> Used weight and abdomen as features (X) and body fat as the target (y).</li>
-    <li><strong>Model Evaluation:</strong> Compared performance before and after removing outliers using metrics like MAE, MSE, RMSE, and R².</li>
-    <li><strong>Visualization:</strong> Plotted Actual vs Predicted body fat to visualize model fit.</li>
-  </ol>
+    <p class="mb-4">
+      Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.
+    </p>
 
-  <h2>Model Performance</h2>
-  <p><strong>Before Outlier Removal:</strong></p>
-  <ul>
-    <li>MAE: 3.33</li>
-    <li>MSE: 17.98</li>
-    <li>RMSE: 4.24</li>
-    <li>R²: 0.613</li>
-  </ul>
-  <p><strong>After Outlier Removal:</strong></p>
-  <ul>
-    <li>MAE: 3.43</li>
-    <li>MSE: 18.36</li>
-    <li>RMSE: 4.28</li>
-    <li>R²: 0.605</li>
-  </ul>
-  <p>
-    Surprisingly, removing outliers slightly worsened the model performance. This highlights the importance of examining the effect of data cleaning on model outcomes.
-  </p>
+    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Tools Used</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Python (Jupyter Notebook)</li>
+      <li>Pandas, NumPy</li>
+      <li>Matplotlib, Seaborn</li>
+      <li>Scikit-learn (Linear Regression)</li>
+    </ul>
 
-  <h2>Value</h2>
-  <p>
-    This project demonstrates practical skills in data cleaning, visualization, regression modeling, and performance interpretation. It also illustrates critical thinking about when cleaning may or may not help.
-  </p>
+    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Skills Demonstrated</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Data Cleaning and EDA</li>
+      <li>Supervised ML (Regression)</li>
+      <li>Performance Evaluation</li>
+      <li>Critical Thinking and Model Interpretation</li>
+    </ul>
 
-  <h2>Reflection</h2>
-  <p>
-    I gained hands-on experience in handling real-world data challenges like noisy features and outliers. Even though model accuracy didn’t improve, I understood how model diagnostics and visual inspection are essential to trust predictions.
-  </p>
+    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Reflection</h2>
+    <p>
+      I learned how small changes in data preparation impact model results. This hands-on experience helped me understand model diagnostics, outlier influence, and the importance of visual insights.
+    </p>
 
-  <h2>Tags</h2>
-  <p><em>#MachineLearning #Regression #DataCleaning #Python #LinearModel #EDA</em></p>
+    <p class="mt-6 italic text-sm text-gray-500">#MachineLearning #Regression #DataCleaning #PortfolioProject</p>
+  </div>
 </body>
 </html>
