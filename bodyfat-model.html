@@ -6,8 +6,7 @@
   <title>Body Fat Prediction | Chaitali Rajurkar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
-  <body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-gray-100 text-gray-900 font-sans">
   <header class="bg-white shadow p-6">
     <div class="container mx-auto">
       <h1 class="text-2xl font-bold text-blue-700">Body Fat Prediction using Linear Regression</h1>
@@ -15,101 +14,119 @@
     </div>
   </header>
 
-    <main class="container mx-auto p-6">
-    <section class="mb-8">
-      <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Overview</h2>
-      <p class="text-gray-700">
-        This project applies linear regression to predict body fat percentage using weight and abdomen circumference.
-        The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.
-      </p>
-    </section>
+  <main class="container mx-auto py-8">
+    <div class="bg-white rounded p-6 shadow">
 
-    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Process Overview</h2>
-    <ul class="list-disc list-inside space-y-1 mb-4">
-      <li><strong>Exploratory Data Analysis:</strong> Explored data patterns using scatterplots.</li>
-      <li><strong>Outlier Detection:</strong> Used boxplots and IQR to detect/remove extreme values.</li>
-      <li><strong>Modeling:</strong> Built linear regression using abdomen and weight as features.</li>
-      <li><strong>Evaluation:</strong> Compared model before and after outlier removal using MAE, RMSE, and R².</li>
-    </ul>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Overview</h2>
+        <p class="text-gray-700">
+          This project applies linear regression to predict body fat percentage using weight and abdomen circumference.
+          The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.
+        </p>
+      </section>
 
-    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Model Results</h2>
-    <div class="overflow-x-auto mb-6">
-      <table class="min-w-full table-auto border border-gray-300">
-        <thead class="bg-gray-200">
-          <tr>
-            <th class="px-4 py-2 text-left border-b border-gray-300">Metric</th>
-            <th class="px-4 py-2 text-left border-b border-gray-300">With Outliers</th>
-            <th class="px-4 py-2 text-left border-b border-gray-300">After Removing Outliers</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="px-4 py-2 border-b border-gray-300">MAE</td>
-            <td class="px-4 py-2 border-b border-gray-300">3.33</td>
-            <td class="px-4 py-2 border-b border-gray-300">3.43</td>
-          </tr>
-          <tr class="bg-gray-50">
-            <td class="px-4 py-2 border-b border-gray-300">MSE</td>
-            <td class="px-4 py-2 border-b border-gray-300">17.98</td>
-            <td class="px-4 py-2 border-b border-gray-300">18.36</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2 border-b border-gray-300">RMSE</td>
-            <td class="px-4 py-2 border-b border-gray-300">4.24</td>
-            <td class="px-4 py-2 border-b border-gray-300">4.28</td>
-          </tr>
-          <tr class="bg-gray-50">
-            <td class="px-4 py-2 border-b border-gray-300">R²</td>
-            <td class="px-4 py-2 border-b border-gray-300">0.613</td>
-            <td class="px-4 py-2 border-b border-gray-300">0.605</td>
-          </tr>
-        </tbody>
-      </table>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Process Overview</h2>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li><strong>Exploratory Data Analysis:</strong> Explored data patterns using scatterplots.</li>
+          <li><strong>Outlier Detection:</strong> Used boxplots and IQR to detect/remove extreme values.</li>
+          <li><strong>Modeling:</strong> Built linear regression using abdomen and weight as features.</li>
+          <li><strong>Evaluation:</strong> Compared model before and after outlier removal using MAE, RMSE, and R².</li>
+        </ul>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Model Results</h2>
+        <div class="overflow-x-auto mb-6">
+          <table class="min-w-full table-auto border border-gray-300">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="px-4 py-2 text-left border-b border-gray-300">Metric</th>
+                <th class="px-4 py-2 text-left border-b border-gray-300">With Outliers</th>
+                <th class="px-4 py-2 text-left border-b border-gray-300">After Removing Outliers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-2 border-b border-gray-300">MAE</td>
+                <td class="px-4 py-2 border-b border-gray-300">3.33</td>
+                <td class="px-4 py-2 border-b border-gray-300">3.43</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-4 py-2 border-b border-gray-300">MSE</td>
+                <td class="px-4 py-2 border-b border-gray-300">17.98</td>
+                <td class="px-4 py-2 border-b border-gray-300">18.36</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border-b border-gray-300">RMSE</td>
+                <td class="px-4 py-2 border-b border-gray-300">4.24</td>
+                <td class="px-4 py-2 border-b border-gray-300">4.28</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-4 py-2 border-b border-gray-300">R²</td>
+                <td class="px-4 py-2 border-b border-gray-300">0.613</td>
+                <td class="px-4 py-2 border-b border-gray-300">0.605</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mb-4 text-gray-700">
+          Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-700 mt-6 mb-2">Figure: Actual vs Predicted Body Fat (After Removing Outliers)</h3>
+        <div class="flex justify-center">
+          <img src="images/bodyfat_visual.png" alt="Prediction Plot Without Outliers" class="rounded shadow mb-4" style="max-width: 70%; height: auto;">
+        </div>
+        <p class="text-sm text-gray-600 italic mb-6 text-center">
+          This scatterplot visualizes how predicted values align with actual body fat measurements after outlier removal. While most predictions follow the expected trend, a few deviations highlight areas for future model improvement.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Value Proposition</h2>
+        <p class="text-gray-700">
+          This project demonstrates how I applied supervised machine learning to a real-world health use case. It helped me understand that data cleaning must be evidence-based, and that sometimes assumptions (like "outliers are bad") don’t always improve outcomes. I got to practice the full data science lifecycle—from EDA to modeling to evaluation—and strengthen how I present results using both metrics and visuals.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Tools Used</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Python (Jupyter Notebook)</li>
+          <li>Pandas, NumPy</li>
+          <li>Matplotlib, Seaborn</li>
+          <li>Scikit-learn (Linear Regression)</li>
+        </ul>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Skills Demonstrated</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Data Cleaning and Exploratory Data Analysis</li>
+          <li>Supervised ML (Regression)</li>
+          <li>Performance Evaluation</li>
+          <li>Critical Thinking and Model Interpretation</li>
+        </ul>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Reflection</h2>
+        <p class="text-gray-700">
+          I learned how small changes in data preparation impact model results. This hands-on experience helped me understand model diagnostics, outlier influence, and the importance of visual insights.
+        </p>
+      </section>
+
+      <section>
+        <a href="index.html" class="text-blue-600 hover:underline">&larr; Back to Portfolio Home</a>
+      </section>
+
     </div>
+  </main>
 
-    <p class="mb-4">
-      Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.
-    </p>
-
-    <h3 class="text-lg font-semibold text-gray-700 mt-6 mb-2">Figure: Actual vs Predicted Body Fat (After Removing Outliers)</h3>
-      <img src="images/bodyfat_visual.png" alt="Prediction Plot Without Outliers" class="rounded shadow mb-4" style="max-width: 80%; height: auto;">
-      <p class="text-sm text-gray-600 italic mb-6">
-      This scatterplot visualizes how predicted values align with actual body fat measurements after outlier removal. 
-      While most predictions follow the expected trend, a few deviations highlight areas for future model improvement.
-    </p>
-
-    <section class="mt-2 mb-10">
-      <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Value Proposition</h2>
-      <p class="text-gray-700">
-        This project shows how I applied linear regression to a real-world health use case. I learned how outliers can 
-        change model performance and why cleaning data isn't always a silver bullet. The project reflects core data science 
-        skills like Exploratory Data Analysis, modeling, and evaluation, which helped me practice presenting results clearly 
-        through visuals and metrics. It’s a great example of turning simple measurements into actionable insights.
-      </p>
-    </section>
-
-    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Tools Used</h2>
-    <ul class="list-disc list-inside mb-4">
-      <li>Python (Jupyter Notebook)</li>
-      <li>Pandas, NumPy</li>
-      <li>Matplotlib, Seaborn</li>
-      <li>Scikit-learn (Linear Regression)</li>
-    </ul>
-
-    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Skills Demonstrated</h2>
-    <ul class="list-disc list-inside mb-4">
-      <li>Data Cleaning and Exploratory Data Analysis</li>
-      <li>Supervised ML (Regression)</li>
-      <li>Performance Evaluation</li>
-      <li>Critical Thinking and Model Interpretation</li>
-    </ul>
-
-    <h2 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Reflection</h2>
-    <p>
-      I learned how small changes in data preparation impact model results. This hands-on experience helped me understand model diagnostics, outlier influence, and the importance of visual insights.
-    </p>
-
-    <p class="mt-6 italic text-sm text-gray-500">#MachineLearning #Regression #DataCleaning #PortfolioProject</p>
-  </div>
+  <footer class="bg-white text-center p-4 shadow mt-10">
+    <p class="text-sm text-gray-500">&copy; 2025 Chaitali Rajurkar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
