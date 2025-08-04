@@ -1,0 +1,64 @@
+<div class="artifact">
+  <h2>Artifact 4: Bias in Machine Learning – Student Pass Prediction Using Decision Trees</h2>
+
+  <h3>Introduction</h3>
+  <p>What happens when a machine learning model learns from imbalanced data? This project explores how bias in datasets can lead to uneven model performance, using real-world student exam data to predict academic success.</p>
+
+  <h3>Description</h3>
+  <p>Using a dataset containing scores in math, reading, and writing along with demographic features, I created a classification model to predict whether a student would pass or fail. The focus was on detecting bias in prediction accuracy caused by gender imbalance and parental education disparities.</p>
+
+  <h3>Objective</h3>
+  <ul>
+    <li>Build a supervised ML model to predict pass/fail outcomes</li>
+    <li>Explore how class imbalance affects prediction quality</li>
+    <li>Analyze pass rates across gender and education levels</li>
+    <li>Reflect on bias mitigation strategies and model fairness</li>
+  </ul>
+
+  <h3>Process</h3>
+  <ol>
+    <li>Created a binary target column: pass/fail (threshold: 60 average score)</li>
+    <li>Explored class distribution and subgroup comparisons</li>
+    <li>Encoded categorical features and trained a Decision Tree</li>
+    <li>Evaluated predictions using precision, recall, and a confusion matrix</li>
+  </ol>
+
+  <h3>Model Performance</h3>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Fail (0)</th><th>Pass (1)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Precision</td><td>0.38</td><td>0.72</td></tr>
+      <tr><td>Recall</td><td>0.37</td><td>0.72</td></tr>
+      <tr><td>F1-score</td><td>0.37</td><td>0.72</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Accuracy:</strong> 0.61 (biased toward the majority class – Pass)</p>
+
+  <h3>Confusion Matrix</h3>
+  <img src="images/artifact4-confusionmatrix.png" alt="Confusion Matrix" width="400">
+  <p>This confusion matrix shows that the model correctly predicted 100 students who passed but misclassified many who failed. This suggests the model favored the majority class.</p>
+
+  <h3>Tools and Technologies Used</h3>
+  <ul>
+    <li>Python (Jupyter Notebook)</li>
+    <li>Pandas, Seaborn, Matplotlib</li>
+    <li>Scikit-learn (DecisionTreeClassifier)</li>
+  </ul>
+
+  <h3>Value Proposition</h3>
+  <p>This artifact highlights why it's important to look beyond accuracy in AI. It shows how human-like bias can creep into AI systems through imbalanced data, impacting decision fairness and reliability.</p>
+
+  <h3>Unique Value</h3>
+  <p>Unlike typical classification projects focused solely on performance, this project emphasizes ethical model evaluation. It invites the reader to consider fairness across subgroups and reflects on responsible AI design.</p>
+
+  <h3>Relevance</h3>
+  <p>This project ties directly into Workshop 4’s focus on data challenges and ethical leadership. It demonstrates practical strategies for identifying and addressing human bias in AI/ML pipelines.</p>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank">Kaggle: Student Performance Dataset</a></li>
+    <li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn Documentation</a></li>
+  </ul>
+</div>
