@@ -7,87 +7,120 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <div class="artifact">
-      <h2 class="text-2xl font-bold text-blue-800 mb-2">Student Success Prediction – Exploring Bias in Decision Trees</h2>
-      <p class="text-gray-700 italic mb-4">A classification project investigating how demographic factors and class imbalance can affect model fairness</p>
+<header class="bg-white shadow p-6">
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-bold text-blue-700">Student Success Prediction – Exploring Bias in Decision Trees</h1>
+      <p class="text-sm text-gray-600">A classification project investigating how demographic factors and class imbalance can affect model fairness</p>
+    </div>
+  </header>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Overview</h3>
-      <p class="text-gray-700 mb-4">This project explores how machine learning models can show bias when trained on imbalanced datasets. Using student exam scores and demographic features, I built a decision tree model to predict whether a student would pass or fail. The analysis includes subgroup trends (gender and parental education) and highlights how imbalance impacts model outcomes.</p>
+  <main class="container mx-auto py-8">
+    <div class="bg-white rounded p-6 shadow">
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Objective</h3>
-      <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Build a supervised classification model (Decision Tree)</li>
-        <li>Analyze pass/fail trends across demographic groups</li>
-        <li>Evaluate performance and fairness of the model</li>
-        <li>Reflect on ethical considerations and bias mitigation</li>
-      </ul>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Overview</h2>
+        <p class="text-gray-700">
+          This project explores how machine learning models can show bias when trained on imbalanced datasets. Using student exam scores and demographic features, I built a decision tree model to predict whether a student would pass or fail. The analysis includes subgroup trends (gender and parental education) and highlights how imbalance impacts model outcomes.
+        </p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Process Overview</h3>
-      <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li><strong>Label Creation:</strong> Average score threshold of 60 to define pass/fail</li>
-        <li><strong>EDA:</strong> Analyzed pass rates by gender and parental education</li>
-        <li><strong>Encoding:</strong> Used LabelEncoder for categorical features</li>
-        <li><strong>Modeling:</strong> Trained and tested a DecisionTreeClassifier</li>
-        <li><strong>Evaluation:</strong> Interpreted performance using precision, recall, and confusion matrix</li>
-      </ul>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Objective</h2>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Build a supervised classification model (Decision Tree)</li> 
+          <li>Analyze pass/fail trends across demographic groups</li> 
+          <li>Evaluate performance and fairness of the model</li> 
+          <li>Reflect on ethical considerations and bias mitigation</li>
+        </ul>
+      </section>
+  
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Process Overview</h2>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li><strong>Label Creation:</strong> Average score threshold of 60 to define pass/fail</li>
+          <li><strong>EDA:</strong> Analyzed pass rates by gender and parental education</li>
+          <li><strong>Encoding:</strong> Used LabelEncoder for categorical features</li>
+          <li><strong>Modeling:</strong> Trained and tested a DecisionTreeClassifier</li>
+          <li><strong>Evaluation:</strong> Interpreted performance using precision, recall, and confusion matrix</li>
+        </ul>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Model Performance</h3>
-      <table class="table-auto border-collapse border border-gray-300 mb-4">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border border-gray-300 px-4 py-2">Metric</th>
-            <th class="border border-gray-300 px-4 py-2">Fail (0)</th>
-            <th class="border border-gray-300 px-4 py-2">Pass (1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">Precision</td>
-            <td class="border border-gray-300 px-4 py-2">0.38</td>
-            <td class="border border-gray-300 px-4 py-2">0.72</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">Recall</td>
-            <td class="border border-gray-300 px-4 py-2">0.37</td>
-            <td class="border border-gray-300 px-4 py-2">0.72</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">F1 Score</td>
-            <td class="border border-gray-300 px-4 py-2">0.37</td>
-            <td class="border border-gray-300 px-4 py-2">0.72</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="text-gray-700 mb-6"><strong>Overall Accuracy:</strong> 0.61 — skewed by class imbalance (71% Pass)</p>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Model Results</h2>
+        <div class="overflow-x-auto mb-4">
+          <table class="min-w-full table-auto border border-gray-300">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="border border-gray-300 px-4 py-2">Metric</th>
+                <th class="border border-gray-300 px-4 py-2">Fail (0)</th>
+                <th class="border border-gray-300 px-4 py-2">Pass (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">Precision</td>
+                <td class="border border-gray-300 px-4 py-2">0.38</td>
+                <td class="border border-gray-300 px-4 py-2">0.72</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">Recall</td>
+                <td class="border border-gray-300 px-4 py-2">0.37</td>
+                <td class="border border-gray-300 px-4 py-2">0.72</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">F1 Score</td>
+                <td class="border border-gray-300 px-4 py-2">0.37</td>
+                <td class="border border-gray-300 px-4 py-2">0.72</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-gray-700">Overall Accuracy: 0.61 — skewed by class imbalance (71% Pass)</p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Confusion Matrix</h3>
-      <img src="images/artifact4-confusionmatrix.png" alt="Confusion Matrix - Pass vs Fail" class="mb-4 border border-gray-300 rounded shadow-md w-96">
-      <p class="text-gray-700 mb-6">The model predicts "Pass" well but struggles with "Fail," showing the classic problem of majority-class bias. This reinforces why accuracy alone isn't always trustworthy.</p>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Confusion Matrix</h2>
+        <div class="flex justify-center">
+          <img src="images/artifact4-confusionmatrix.png" alt="Confusion Matrix - Pass vs Fail" class="mb-4 border border-gray-300 rounded shadow-md w-96">
+        </div>
+        <p class="text-sm text-gray-700 italic text-center">The model predicts "Pass" well but struggles with "Fail," showing the classic problem of majority-class bias. This reinforces why accuracy alone isn't always trustworthy.</p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Tools & Technologies</h3>
-      <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Python (Jupyter Notebook)</li>
-        <li>Pandas, Seaborn, Matplotlib</li>
-        <li>Scikit-learn: DecisionTreeClassifier, LabelEncoder</li>
-      </ul>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Tools & Technologies</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Python (Jupyter Notebook)</li>
+          <li>Pandas, Seaborn, Matplotlib</li>
+          <li>Scikit-learn: DecisionTreeClassifier, LabelEncoder</li>
+        </ul>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Value Proposition</h3>
-      <p class="text-gray-700 mb-4">This project taught me to think beyond traditional metrics and pay attention to how AI models may favor certain groups. I practiced not just building a model, but evaluating it for fairness and real-world impact.</p>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Value Proposition</h2>
+        <p class="text-gray-700">This project taught me to think beyond traditional metrics and pay attention to how AI models may favor certain groups. I practiced not just building a model, but evaluating it for fairness and real-world impact.</p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Unique Value</h3>
-      <p class="text-gray-700 mb-4">Most student ML projects stop at accuracy — this one digs deeper. It’s not about building the most accurate model, but understanding what it gets wrong and why that matters.</p>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Unique Value</h2>
+        <p class="text-gray-700">Most student ML projects stop at accuracy — this one digs deeper. It’s not about building the most accurate model, but understanding what it gets wrong and why that matters.</p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Relevance</h3>
-      <p class="text-gray-700 mb-4">Relevant to Workshop 4’s emphasis on bias, ethics, and data challenges. Shows how fairness and equity should be considered when building AI models.</p>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Relevance</h2>
+        <p class="text-gray-700">Relevant to Workshop 4’s emphasis on bias, ethics, and data challenges. Shows how fairness and equity should be considered when building AI models.</p>
+      </section>
 
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">References</h3>
-      <ul class="list-disc list-inside text-gray-700">
-        <li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank" class="text-blue-600">Kaggle: Student Performance Dataset</a></li>
-        <li><a href="https://scikit-learn.org/" target="_blank" class="text-blue-600">Scikit-learn Documentation</a></li>
-      </ul>
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">References</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank" class="text-blue-600">Kaggle: Student Performance Dataset</a></li>
+          <li><a href="https://scikit-learn.org/" target="_blank" class="text-blue-600">Scikit-learn Documentation</a></li>
+        </ul>
+      </section>
 
-      <p class="mt-6"><a href="index.html" class="text-blue-700 hover:underline">← Back to Portfolio Home</a></p>
+      <section>
+        <a href="index.html" class="text-blue-700 hover:underline">← Back to Portfolio Home</a>
+      </section>
     </div>
   </main>
   
