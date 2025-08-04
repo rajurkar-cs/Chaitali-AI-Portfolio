@@ -1,64 +1,119 @@
-<div class="artifact">
-  <h2>Artifact 4: Bias in Machine Learning – Student Pass Prediction Using Decision Trees</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artifact 4: Bias in Machine Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+  <main class="container mx-auto p-6">
+    <a href="index.html" class="text-blue-600 hover:underline">&larr; Back to Portfolio Home</a>
 
-  <h3>Introduction</h3>
-  <p>What happens when a machine learning model learns from imbalanced data? This project explores how bias in datasets can lead to uneven model performance, using real-world student exam data to predict academic success.</p>
+    <h1 class="text-2xl font-bold mt-4 mb-2">Artifact 4: Bias in Machine Learning – Student Pass Prediction Using Decision Trees</h1>
 
-  <h3>Description</h3>
-  <p>Using a dataset containing scores in math, reading, and writing along with demographic features, I created a classification model to predict whether a student would pass or fail. The focus was on detecting bias in prediction accuracy caused by gender imbalance and parental education disparities.</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Introduction</h2>
+      <p>This project explores how bias in datasets can lead to uneven model performance, using real-world student exam data to predict academic success.</p>
+    </section>
 
-  <h3>Objective</h3>
-  <ul>
-    <li>Build a supervised ML model to predict pass/fail outcomes</li>
-    <li>Explore how class imbalance affects prediction quality</li>
-    <li>Analyze pass rates across gender and education levels</li>
-    <li>Reflect on bias mitigation strategies and model fairness</li>
-  </ul>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Description</h2>
+      <p>Using a dataset containing math, reading, and writing scores along with demographics, I created a classification model to predict whether a student would pass or fail. I focused on detecting prediction bias caused by gender and parental education disparities.</p>
+    </section>
 
-  <h3>Process</h3>
-  <ol>
-    <li>Created a binary target column: pass/fail (threshold: 60 average score)</li>
-    <li>Explored class distribution and subgroup comparisons</li>
-    <li>Encoded categorical features and trained a Decision Tree</li>
-    <li>Evaluated predictions using precision, recall, and a confusion matrix</li>
-  </ol>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Objective</h2>
+      <ul class="list-disc list-inside">
+        <li>Build a supervised ML model to predict pass/fail outcomes</li>
+        <li>Explore how class imbalance affects prediction quality</li>
+        <li>Analyze pass rates across gender and education levels</li>
+        <li>Reflect on bias mitigation strategies and model fairness</li>
+      </ul>
+    </section>
 
-  <h3>Model Performance</h3>
-  <table>
-    <thead>
-      <tr><th>Metric</th><th>Fail (0)</th><th>Pass (1)</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Precision</td><td>0.38</td><td>0.72</td></tr>
-      <tr><td>Recall</td><td>0.37</td><td>0.72</td></tr>
-      <tr><td>F1-score</td><td>0.37</td><td>0.72</td></tr>
-    </tbody>
-  </table>
-  <p><strong>Accuracy:</strong> 0.61 (biased toward the majority class – Pass)</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Process</h2>
+      <ol class="list-decimal list-inside">
+        <li>Created a binary target column: pass/fail (average score ≥ 60)</li>
+        <li>Explored class distribution and subgroup pass rates</li>
+        <li>Encoded categorical features and trained a Decision Tree</li>
+        <li>Evaluated results with precision, recall, and confusion matrix</li>
+      </ol>
+    </section>
 
-  <h3>Confusion Matrix</h3>
-  <img src="images/artifact4-confusionmatrix.png" alt="Confusion Matrix" width="400">
-  <p>This confusion matrix shows that the model correctly predicted 100 students who passed but misclassified many who failed. This suggests the model favored the majority class.</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Model Performance</h2>
+      <table class="table-auto border border-gray-300 w-full text-sm">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border px-4 py-2">Metric</th>
+            <th class="border px-4 py-2">Fail (0)</th>
+            <th class="border px-4 py-2">Pass (1)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">Precision</td>
+            <td class="border px-4 py-2">0.38</td>
+            <td class="border px-4 py-2">0.72</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Recall</td>
+            <td class="border px-4 py-2">0.37</td>
+            <td class="border px-4 py-2">0.72</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">F1-score</td>
+            <td class="border px-4 py-2">0.37</td>
+            <td class="border px-4 py-2">0.72</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="mt-2 text-gray-700"><strong>Overall Accuracy:</strong> 0.61 — skewed by class imbalance (71% Pass).</p>
+    </section>
 
-  <h3>Tools and Technologies Used</h3>
-  <ul>
-    <li>Python (Jupyter Notebook)</li>
-    <li>Pandas, Seaborn, Matplotlib</li>
-    <li>Scikit-learn (DecisionTreeClassifier)</li>
-  </ul>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Confusion Matrix</h2>
+      <img src="images/artifact4-confusionmatrix.png" alt="Confusion Matrix" class="w-96 border my-4">
+      <p>This matrix reveals that the model struggled to identify failing students, showing a strong bias toward the majority class (Pass).</p>
+    </section>
 
-  <h3>Value Proposition</h3>
-  <p>This artifact highlights why it's important to look beyond accuracy in AI. It shows how human-like bias can creep into AI systems through imbalanced data, impacting decision fairness and reliability.</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Tools and Technologies Used</h2>
+      <ul class="list-disc list-inside">
+        <li>Python (Jupyter Notebook)</li>
+        <li>Pandas, Seaborn, Matplotlib</li>
+        <li>Scikit-learn (DecisionTreeClassifier)</li>
+      </ul>
+    </section>
 
-  <h3>Unique Value</h3>
-  <p>Unlike typical classification projects focused solely on performance, this project emphasizes ethical model evaluation. It invites the reader to consider fairness across subgroups and reflects on responsible AI design.</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Value Proposition</h2>
+      <p>This artifact shows why accuracy alone isn’t enough. The model’s unfair treatment of underrepresented groups spotlights how real-world bias creeps into AI — and why ethical checks are critical.</p>
+    </section>
 
-  <h3>Relevance</h3>
-  <p>This project ties directly into Workshop 4’s focus on data challenges and ethical leadership. It demonstrates practical strategies for identifying and addressing human bias in AI/ML pipelines.</p>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Unique Value</h2>
+      <p>This isn’t just a classifier. It’s a commentary on fairness. I used a simple model to spark a big question: Is our data fair enough to trust our predictions?</p>
+    </section>
 
-  <h3>References</h3>
-  <ul>
-    <li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank">Kaggle: Student Performance Dataset</a></li>
-    <li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn Documentation</a></li>
-  </ul>
-</div>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">Relevance</h2>
+      <p>This project aligns with Workshop 4’s emphasis on bias, data challenges, and ethical decision-making — crucial skills for anyone integrating AI into real-world settings.</p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-1">References</h2>
+      <ul class="list-disc list-inside">
+        <li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" class="text-blue-600 hover:underline" target="_blank">Kaggle: Student Performance Dataset</a></li>
+        <li><a href="https://scikit-learn.org/" class="text-blue-600 hover:underline" target="_blank">Scikit-learn Documentation</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center p-4 shadow mt-10">
+    <p class="text-sm text-gray-500">&copy; 2025 Chaitali Rajurkar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
