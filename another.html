@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #003c5f, #001e2e);
+      background: linear-gradient(to bottom right, #003c5f, #001e2e); /* diagonal */
       color: #fff;
       min-height: 100vh;
     }
@@ -51,14 +51,16 @@
 
     .hero {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 5rem 10%;
-      flex-wrap: wrap;
+      min-height: calc(100vh - 80px);
     }
 
     .hero-content {
-      max-width: 600px;
+      max-width: 700px;
     }
 
     .hero h1 {
@@ -76,7 +78,9 @@
 
     .buttons {
       display: flex;
+      justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -91,14 +95,15 @@
     }
 
     .btn.contact {
-      background: #8d8dff;
-      color: #fff;
+      border: 2px solid #8d8dff;
+      color: #8d8dff;
+      background: transparent;
     }
 
     .btn.portfolio {
       border: 2px solid #00c3b9;
       color: #00c3b9;
-      background: transparent; /* ✅ Transparent background */
+      background: transparent;
     }
 
     .btn:hover {
@@ -106,17 +111,18 @@
     }
 
     .hero-image {
-      position: relative;
       display: flex;
       align-items: center;
-      margin-top: 2rem;
+      justify-content: center;
+      margin-top: 2.5rem;
     }
 
     .hero-image img {
-      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
       border: 4px solid #fff;
-      width: 60px;
-      height: 60px;
+      border-radius: 10px; /* Rectangle shape */
     }
 
     .name-tag {
@@ -156,7 +162,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="https://via.placeholder.com/60" alt="Chaitali Rajurkar" />
+      <img src="https://via.placeholder.com/100x100" alt="Chaitali Rajurkar" />
       <div class="name-tag">Chaitali Rajurkar</div>
     </div>
   </main>
