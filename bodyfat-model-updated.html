@@ -1,118 +1,163 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Body Fat Prediction using Linear Regression</title>
+  <title>Body Fat Prediction | Chaitali Rajurkar</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
     }
 
     header {
       background: linear-gradient(to bottom right, #003c5f, #001e2e);
-      color: white;
-      padding: 3rem 10%;
     }
 
-    header h1 {
-      font-size: 2.2rem;
-      font-weight: bold;
+    .header-title {
+      color: #fff;
+    }
+
+    .header-sub {
+      color: #cbd5e0;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a202c;
+    }
+
+    .content-section {
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .content-section h3 {
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 10%;
-    }
-
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      color: #003c5f;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      background: #fff;
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    th {
-      background: #e9ecef;
-    }
-
     footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
+      background-color: #f8fafc;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Body Fat Prediction using Linear Regression</h1>
-    <p>A project predicting body fat using basic body measurements with linear regression modeling</p>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="p-6 mb-8">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold header-title">Body Fat Prediction using Linear Regression</h1>
+      <p class="text-sm header-sub">A project predicting body fat using basic body measurements with linear regression modeling</p>
+    </div>
   </header>
 
-  <div class="content">
-    <h2>Overview</h2>
-    <p>This project applies linear regression to predict body fat percentage using weight and abdomen circumference. The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.</p>
+  <main class="max-w-5xl mx-auto px-4">
+    <div class="content-section">
+      <h2 class="section-title">Overview</h2>
+      <p>This project applies linear regression to predict body fat percentage using weight and abdomen circumference. The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.</p>
+    </div>
 
-    <h2>Process Overview</h2>
-    <ul>
-      <li><strong>Exploratory Data Analysis:</strong> Explored data patterns using scatterplots.</li>
-      <li><strong>Outlier Detection:</strong> Used boxplots and IQR to detect/remove extreme values.</li>
-      <li><strong>Modeling:</strong> Built linear regression using abdomen and weight as features.</li>
-      <li><strong>Evaluation:</strong> Compared model before and after outlier removal using MAE, RMSE, and R².</li>
-    </ul>
+    <div class="content-section">
+      <h2 class="section-title">Process Overview</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Exploratory Data Analysis:</strong> Explored data patterns using scatterplots.</li>
+        <li><strong>Outlier Detection:</strong> Used boxplots and IQR to detect/remove extreme values.</li>
+        <li><strong>Modeling:</strong> Built linear regression using abdomen and weight as features.</li>
+        <li><strong>Evaluation:</strong> Compared model before and after outlier removal using MAE, RMSE, and R².</li>
+      </ul>
+    </div>
 
-    <h2>Model Results</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>With Outliers</th>
-          <th>After Removing Outliers</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>MAE</td><td>3.33</td><td>3.43</td></tr>
-        <tr><td>MSE</td><td>17.98</td><td>18.36</td></tr>
-        <tr><td>RMSE</td><td>4.24</td><td>4.28</td></tr>
-        <tr><td>R²</td><td>0.613</td><td>0.605</td></tr>
-      </tbody>
-    </table>
+    <div class="content-section">
+      <h2 class="section-title">Model Results</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="min-w-full table-auto border border-gray-300 text-sm">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Metric</th>
+              <th class="px-4 py-2 border">With Outliers</th>
+              <th class="px-4 py-2 border">After Removing Outliers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="px-4 py-2 border">MAE</td>
+              <td class="px-4 py-2 border">3.33</td>
+              <td class="px-4 py-2 border">3.43</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 border">MSE</td>
+              <td class="px-4 py-2 border">17.98</td>
+              <td class="px-4 py-2 border">18.36</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="px-4 py-2 border">RMSE</td>
+              <td class="px-4 py-2 border">4.24</td>
+              <td class="px-4 py-2 border">4.28</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 border">R²</td>
+              <td class="px-4 py-2 border">0.613</td>
+              <td class="px-4 py-2 border">0.605</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-700">
+        Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.
+      </p>
 
-    <p style="margin-top: 1rem;">Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.</p>
-  </div>
+      <h3 class="mt-6 text-gray-800">Figure: Actual vs Predicted Body Fat (After Removing Outliers)</h3>
+      <div class="flex justify-center my-4">
+        <img src="images/bodyfat_visual.png" alt="Prediction Plot Without Outliers" class="rounded shadow-md max-w-xl w-full">
+      </div>
+      <p class="text-sm text-center text-gray-600 italic">
+        This scatterplot visualizes how predicted values align with actual body fat measurements after outlier removal.
+      </p>
+    </div>
 
-  <footer>
-    &copy; 2025 Chaitali Rajurkar | This page is part of my AI Portfolio.
+    <div class="content-section">
+      <h2 class="section-title">Value Proposition</h2>
+      <p>This project demonstrates how I applied supervised machine learning to a real-world health use case. It helped me understand that data cleaning must be evidence-based, and that sometimes assumptions (like “outliers are bad”) don’t always improve outcomes.</p>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">Tools Used</h2>
+      <ul class="list-disc list-inside">
+        <li>Python (Jupyter Notebook)</li>
+        <li>Pandas, NumPy</li>
+        <li>Matplotlib, Seaborn</li>
+        <li>Scikit-learn (Linear Regression)</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">Skills Demonstrated</h2>
+      <ul class="list-disc list-inside">
+        <li>Data Cleaning and Exploratory Data Analysis</li>
+        <li>Supervised ML (Regression)</li>
+        <li>Performance Evaluation</li>
+        <li>Critical Thinking and Model Interpretation</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">Reflection</h2>
+      <p>I learned how small changes in data preparation impact model results. This hands-on experience helped me understand model diagnostics, outlier influence, and the importance of visual insights.</p>
+    </div>
+
+    <div class="text-left mt-6">
+      <a href="index.html" class="text-blue-600 hover:underline">&larr; Back to Portfolio Home</a>
+    </div>
+  </main>
+
+  <footer class="text-center p-4 mt-12 border-t text-sm text-gray-500">
+    &copy; 2025 Chaitali Rajurkar. All rights reserved.
   </footer>
 </body>
 </html>
