@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chaitali Rajurkar | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,116 +14,139 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    section {
-      padding: 4rem 10%;
-    }
-
-    .white-section {
-      background-color: #fff;
-    }
-
-    .dark-section {
       background: linear-gradient(to bottom right, #003c5f, #001e2e);
-      color: #fff;
+      color: white;
+      min-height: 100vh;
+      padding: 2rem;
     }
 
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
+    .navbar {
+      height: 60px;
+      background: #000;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
       text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
     }
 
-    .about p {
-      max-width: 800px;
-      margin: 0 auto;
+    #about p {
       font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    #portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
 
     .portfolio-item {
       background: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
-      margin-bottom: 1.5rem;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .portfolio-item h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
+      color: #00ffe1;
     }
 
     .portfolio-item p {
       font-size: 1rem;
+      line-height: 1.5;
     }
 
-    .contact p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .contact a {
+    a {
+      color: #00ffe1;
       text-decoration: none;
-      color: #0077cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      #about p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="navbar"></header>
 
-  <!-- About Section -->
-  <section class="white-section about">
-    <h2 class="section-title">About Me</h2>
+  <section id="about" class="section">
+    <h2>About Me</h2>
     <p>
-      Hey, I'm Chaitali — a Data Analytics professional and Master's student in AI & Data Analytics. I’m passionate about ethical AI,
-      data privacy, and turning messy data into meaningful insights. Whether it's building dashboards, designing models,
-      or simplifying tech for others, I live at the intersection of logic and creativity.
+      Hey, I'm Chaitali — a Data Analytics professional and Master's student in AI & Data Analytics. 
+      I’m passionate about ethical AI, data privacy, and turning messy data into meaningful insights. 
+      Whether it's building dashboards, designing models, or simplifying tech for others, I live at the intersection of logic and creativity.
     </p>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="dark-section">
-    <h2 class="section-title">Portfolio Highlights</h2>
-
-    <div class="portfolio-item">
-      <h3>📌 Artifact 1: DALL·E – Teaching AI to Imagine</h3>
-      <p>A group project exploring generative AI through DALL·E, its evolution, and ethical implications.</p>
+  <section class="section">
+    <h2>Portfolio Highlights</h2>
+    <div id="portfolio">
+      <div class="portfolio-item">
+        <h3>📌 Artifact 1: DALL·E – Teaching AI to Imagine</h3>
+        <p>
+          A group project exploring generative AI through DALL·E, its evolution, and ethical implications.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h3>📌 Artifact 2: Body Fat Prediction</h3>
+        <p>
+          Built a regression model using basic body measurements to predict body fat percentage. Data cleaned and modeled using Python.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h3>📌 Artifact 3: Neural Networks as Pizza</h3>
+        <p>
+          A playful, analogy-based explanation of neural networks using the pizza-making process. Developed for a classroom audience.
+        </p>
+      </div>
+      <div class="portfolio-item">
+        <h3>📌 Artifact 4: Bias in Student Success Predictions</h3>
+        <p>
+          Explored how model bias affects fairness when predicting student performance using decision trees and imbalanced data.
+        </p>
+      </div>
     </div>
-
-    <div class="portfolio-item">
-      <h3>📌 Artifact 2: Body Fat Prediction</h3>
-      <p>Built a regression model using basic body measurements to predict body fat percentage. Data cleaned and modeled using Python.</p>
-    </div>
-
-    <div class="portfolio-item">
-      <h3>📌 Artifact 3: Neural Networks as Pizza</h3>
-      <p>Explains ANN, CNN, GAN etc. using the steps of making pizza. A creative breakdown for non-tech learners.</p>
-    </div>
-
-    <!-- Add more artifacts as needed -->
   </section>
 
-  <!-- Contact Section -->
-  <section class="white-section contact">
-    <h2 class="section-title">Contact Me</h2>
-    <p>Let’s connect! You can find me here:</p>
-    <ul>
-      <li><a href="mailto:chaitali.rajurkar@myemail.indwes.edu">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/chaitali-rajurkar/" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/rajurkar-cs" target="_blank">GitHub</a></li>
-    </ul>
-  </section>
-
+  <footer>
+    &copy; 2025 Chaitali Rajurkar. All rights reserved.
+  </footer>
 </body>
 </html>
