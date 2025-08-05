@@ -4,92 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chaitali Rajurkar | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    .white-section {
+      background-color: #fff;
+    }
+
+    .dark-section {
+      background: linear-gradient(to bottom right, #003c5f, #001e2e);
+      color: #fff;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-item p {
+      font-size: 1rem;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+  </style>
 </head>
-<body class="bg-base-100 text-base-content font-sans">
-  <!-- NAVBAR -->
-  <div class="navbar bg-base-100 shadow-md px-6 sticky top-0 z-50">
-    <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl">Chaitali Rajurkar</a>
-    </div>
-    <div class="flex-none hidden md:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+<body>
 
-  <!-- HERO SECTION -->
-  <section class="hero min-h-screen bg-gradient-to-b from-blue-50 to-white">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="images/profile.jpg" class="max-w-xs rounded-full shadow-2xl" alt="Profile photo" />
-      <div>
-        <h1 class="text-4xl font-bold">Hi, I'm Chaitali.</h1>
-        <p class="py-6 max-w-xl">
-          I'm a Data Analytics professional and a Master's student in Artificial Intelligence & Data Analytics at Indiana Wesleyan University. I thrive at the intersection of ethical tech and purposeful innovation. From AI strategy and data privacy to dashboard storytelling, I bring clarity to complexity.
-        </p>
-        <a href="#contact" class="btn btn-primary">Let's Connect</a>
-      </div>
-    </div>
+  <!-- About Section -->
+  <section class="white-section about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Hey, I'm Chaitali — a Data Analytics professional and Master's student in AI & Data Analytics. I’m passionate about ethical AI,
+      data privacy, and turning messy data into meaningful insights. Whether it's building dashboards, designing models,
+      or simplifying tech for others, I live at the intersection of logic and creativity.
+    </p>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-10 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Portfolio Highlights</h2>
-    <div class="grid gap-6 md:grid-cols-2">
+  <!-- Portfolio Section -->
+  <section class="dark-section">
+    <h2 class="section-title">Portfolio Highlights</h2>
 
-      <!-- Artifact Card 1 -->
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title text-blue-700">Artifact 1: DALL·E – Teaching AI to Imagine</h3>
-          <p>A group project exploring DALL·E's evolution, applications, and ethical implications.</p>
-          <ul class="text-sm text-gray-600 list-disc list-inside">
-            <li><strong>Tools:</strong> PowerPoint, AI image prompts, research documentation</li>
-            <li><strong>Value:</strong> Demonstrates tech literacy and collaborative analysis</li>
-          </ul>
-          <div class="card-actions justify-end">
-            <a href="dalle.html" class="btn btn-outline btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Artifact Card 2 -->
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h3 class="card-title text-blue-700">Artifact 2: Body Fat Prediction using ML</h3>
-          <p>Used supervised regression modeling to predict body fat from physical measurements.</p>
-          <ul class="text-sm text-gray-600 list-disc list-inside">
-            <li><strong>Tools:</strong> Python, Pandas, Scikit-learn, Jupyter</li>
-            <li><strong>Value:</strong> Demonstrates EDA, outlier handling, and model evaluation</li>
-          </ul>
-          <div class="card-actions justify-end">
-            <a href="bodyfat-model.html" class="btn btn-outline btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- More cards can be added here -->
-
+    <div class="portfolio-item">
+      <h3>📌 Artifact 1: DALL·E – Teaching AI to Imagine</h3>
+      <p>A group project exploring generative AI through DALL·E, its evolution, and ethical implications.</p>
     </div>
+
+    <div class="portfolio-item">
+      <h3>📌 Artifact 2: Body Fat Prediction</h3>
+      <p>Built a regression model using basic body measurements to predict body fat percentage. Data cleaned and modeled using Python.</p>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>📌 Artifact 3: Neural Networks as Pizza</h3>
+      <p>Explains ANN, CNN, GAN etc. using the steps of making pizza. A creative breakdown for non-tech learners.</p>
+    </div>
+
+    <!-- Add more artifacts as needed -->
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="py-10 bg-gray-50 px-6">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-      <p class="mb-4">Want to collaborate, chat AI or just say hi? Reach out below.</p>
-      <ul class="text-gray-700">
-        <li>Email: <a class="text-blue-600" href="mailto:chaitali.rajurkar@myemail.indwes.edu">chaitali.rajurkar@myemail.indwes.edu</a></li>
-        <li>LinkedIn: <a class="text-blue-600" href="https://www.linkedin.com/in/chaitali-rajurkar/">Chaitali Rajurkar</a></li>
-      </ul>
-    </div>
+  <!-- Contact Section -->
+  <section class="white-section contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Let’s connect! You can find me here:</p>
+    <ul>
+      <li><a href="mailto:chaitali.rajurkar@myemail.indwes.edu">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/chaitali-rajurkar/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/rajurkar-cs" target="_blank">GitHub</a></li>
+    </ul>
   </section>
 
-  <footer class="footer footer-center p-4 bg-white text-base-content border-t">
-    <p class="text-sm">&copy; 2025 Chaitali Rajurkar. All rights reserved.</p>
-  </footer>
 </body>
 </html>
