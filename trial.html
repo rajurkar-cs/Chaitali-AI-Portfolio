@@ -3,103 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chaitali Rajurkar | AI Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Chaitali Rajurkar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    .white-section {
+      background-color: #fff;
+    }
+
+    .dark-section {
+      background: linear-gradient(to bottom right, #003c5f, #001e2e);
+      color: #fff;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-item p {
+      font-size: 1rem;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: #0077cc;
     }
   </style>
 </head>
-<body class="text-gray-900 font-sans">
+<body>
 
-<!-- Hero Section -->
-<section class="bg-gradient-to-br from-[#003c5f] to-[#001e2e] text-white py-20 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-    
-    <!-- Profile Image -->
-    <div>
-      <img src="images/Pic.jpg" alt="Chaitali Rajurkar" class="w-64 h-64 object-cover rounded-lg border-4 border-white shadow-lg">
+  <!-- About Section -->
+  <section class="white-section about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Hey, I'm Chaitali — a Data Analytics professional and Master's student in AI & Data Analytics. I’m passionate about ethical AI,
+      data privacy, and turning messy data into meaningful insights. Whether it's building dashboards, designing models,
+      or simplifying tech for others, I live at the intersection of logic and creativity.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="dark-section">
+    <h2 class="section-title">Portfolio Highlights</h2>
+
+    <div class="portfolio-item">
+      <h3>📌 Artifact 1: DALL·E – Teaching AI to Imagine</h3>
+      <p>A group project exploring generative AI through DALL·E, its evolution, and ethical implications.</p>
     </div>
 
-    <!-- Hero Content -->
-    <div class="text-center md:text-left max-w-xl">
-      <h1 class="text-4xl font-extrabold mb-3">Hi, I'm Chaitali Rajurkar</h1>
-      <p class="text-blue-200 font-medium mb-2 text-lg">AI & Data Analytics Enthusiast</p>
-      <p class="text-blue-100 mb-6 leading-relaxed">
-        I turn complex data into meaningful stories and smart solutions. I’m passionate about ethical AI, data privacy, and analytics that make a difference. Whether it’s dashboards, models, or storytelling, I work where logic meets creativity.
-      </p>
-
-      <div class="flex flex-wrap justify-center md:justify-start gap-4">
-        <a href="#portfolio" class="bg-white text-blue-900 px-5 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition">📁 See My Portfolio</a>
-        <a href="#contact" class="border border-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">📧 Contact Me</a>
-        <a href="resume.pdf" target="_blank" class="border border-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">📄 Download Resume</a>
-      </div>
+    <div class="portfolio-item">
+      <h3>📌 Artifact 2: Body Fat Prediction</h3>
+      <p>Built a regression model using basic body measurements to predict body fat percentage. Data cleaned and modeled using Python.</p>
     </div>
-  </div>
-</section>
 
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="bg-gradient-to-br from-[#003c5f] to-[#001e2e] text-white py-16 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-10 text-center">Portfolio Highlights</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <div class="bg-gray-700 rounded-lg p-6 shadow">
-        <h3 class="text-xl font-semibold mb-2">📌 <a href="dalle.html" class="hover:underline">Artifact 1: DALL·E – Teaching AI to Imagine</a></h3>
-        <p class="text-sm mb-2">A timeline and case analysis of DALL·E's evolution, applications, and limitations.</p>
-        <ul class="text-sm text-gray-200 list-disc list-inside">
-          <li><strong>Tools:</strong> PowerPoint, AI image prompts</li>
-          <li><strong>Value:</strong> Critical thinking, tech literacy, ethical impact</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-700 rounded-lg p-6 shadow">
-        <h3 class="text-xl font-semibold mb-2">📌 <a href="bodyfat-model.html" class="hover:underline">Artifact 2: Body Fat Prediction</a></h3>
-        <p class="text-sm mb-2">Regression model using linear regression and body measurement data.</p>
-        <ul class="text-sm text-gray-200 list-disc list-inside">
-          <li><strong>Tools:</strong> Python, Pandas, Scikit-learn</li>
-          <li><strong>Value:</strong> End-to-end data science workflow</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-700 rounded-lg p-6 shadow">
-        <h3 class="text-xl font-semibold mb-2">📌 <a href="neuralnet-pizza.html" class="hover:underline">Artifact 3: Neural Networks as Pizza</a></h3>
-        <p class="text-sm mb-2">An analogy-driven approach to explain neural networks using pizza-making.</p>
-        <ul class="text-sm text-gray-200 list-disc list-inside">
-          <li><strong>Tools:</strong> ChatGPT, instructional design</li>
-          <li><strong>Value:</strong> Simplifies complex AI concepts for non-technical audiences</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-700 rounded-lg p-6 shadow">
-        <h3 class="text-xl font-semibold mb-2">📌 <a href="student-bias-model.html" class="hover:underline">Artifact 4: Student Success Bias</a></h3>
-        <p class="text-sm mb-2">Explores demographic bias in academic performance predictions.</p>
-        <ul class="text-sm text-gray-200 list-disc list-inside">
-          <li><strong>Tools:</strong> Python, Seaborn, Decision Trees</li>
-          <li><strong>Value:</strong> AI fairness & ethical data modeling</li>
-        </ul>
-      </div>
+    <div class="portfolio-item">
+      <h3>📌 Artifact 3: Neural Networks as Pizza</h3>
+      <p>An analogy-driven approach to explain neural networks using pizza-making. A creative breakdown for non-tech learners.</p>
     </div>
-  </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact" class="bg-white py-16 px-6">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-4">Contact</h2>
-    <p class="text-gray-700 mb-4">Let's connect! You can reach me at:</p>
-    <ul class="text-gray-700">
-      <li>Email: <a href="mailto:chaitali.rajurkar@myemail.indwes.edu" class="text-blue-600 hover:underline">chaitali.rajurkar@myemail.indwes.edu</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/chaitali-rajurkar/" class="text-blue-600 hover:underline">linkedin.com/in/chaitali-rajurkar</a></li>
+    <div class="portfolio-item">
+      <h3>📌 Artifact 4: Student Success Bias</h3>
+      <p>Explores demographic bias in academic performance predictions.</p>
+    </div>
+
+    <!-- Add more artifacts as needed --> 
+  </section>
+
+  <!-- Contact Section -->
+  <section class="white-section contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Let’s connect! You can find me here:</p>
+    <ul>
+      <li><a href="mailto:chaitali.rajurkar@myemail.indwes.edu">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/chaitali-rajurkar/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/rajurkar-cs" target="_blank">GitHub</a></li>
     </ul>
-  </div>
-</section>
-
-<footer class="text-center text-gray-500 text-sm py-4 bg-white">
-  <p>&copy; 2025 Chaitali Rajurkar. All rights reserved.</p>
-</footer>
+  </section>
 
 </body>
 </html>
+
