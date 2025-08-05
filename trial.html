@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaitali Rajurkar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1b2735 0%, #090e14 100%);
-            color: #d1d5db; /* A light gray for text */
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaitali Rajurkar | AI & Data Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-gray-900 text-gray-300">
-    <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-        <header class="flex justify-between items-center py-4 absolute top-0 left-0 right-0 px-4 md:px-8">
-            <h1 class="text-xl font-semibold">Chaitali Rajurkar</h1>
-            <div class="hidden md:flex space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition-colors duration-200">About</a>
-                <a href="#" class="hover:text-white transition-colors duration-200">Portfolio</a>
-                <a href="#" class="hover:text-white transition-colors duration-200">Contact</a>
-            </div>
-        </header>
-
-        <main class="flex flex-col md:flex-row items-center justify-between mt-20 md:mt-0">
-            <div class="max-w-xl text-center md:text-left">
-                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                    Hi, I'm Chaitali.
-                </h2>
-                <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-md mx-auto md:mx-0">
-                    I turn complex data into meaningful stories and smart solutions. I'm passionate about ethical AI, data privacy, and using analytics to solve real-world problems. Let's just say spreadsheets, models, and a bit of creativity are my favorite combo.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-200">
-                        Contact Me
-                    </button>
-                    <button class="border-2 border-btnTeal text-btnTeal px-6 py-3 rounded-md font-semibold flex items-center gap-2 hover:bg-teal-800 hover:text-white">
-                        See My Work 
-                    </button>
-                </div>
-            </div>
-            <div class="hidden md:block absolute right-8 top-1/2 -translate-y-1/2">
-                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm border border-gray-700 py-2 px-6 rounded-full shadow-lg">
-                    <span class="text-sm text-white font-semibold">Chaitali Rajurkar</span>
-                </div>
-            </div>
-        </main>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="navbar bg-white shadow-md px-6 py-4 mb-6">
+    <div class="flex-1">
+      <a href="index.html" class="text-2xl font-bold text-blue-700">Chaitali Rajurkar</a>
     </div>
+    <nav class="space-x-4">
+      <a href="#about" class="text-gray-600 hover:text-blue-700">About</a>
+      <a href="#artifacts" class="text-gray-600 hover:text-blue-700">Artifacts</a>
+      <a href="#contact" class="text-gray-600 hover:text-blue-700">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="container mx-auto px-6 mb-10">
+    <div class="bg-white shadow-md rounded-xl p-6 flex flex-col md:flex-row items-center">
+      <img src="images/profile.jpg" alt="Profile Photo" class="w-32 h-32 rounded-full mb-4 md:mb-0 md:mr-6 object-cover shadow-md" />
+      <div>
+        <h2 class="text-xl font-bold mb-2">About Me</h2>
+        <p class="text-gray-700">
+          Hey, I'm Chaitali – a Data Analytics professional and a Master's student in Artificial Intelligence & Data Analytics at Indiana Wesleyan University, driven by a passion for ethical tech and purpose-driven data solutions. My background in data privacy, analytics, and AI strategy helps me bridge the gap between technical design and real-world impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Artifacts Section -->
+  <section id="artifacts" class="container mx-auto px-6">
+    <h2 class="text-2xl font-bold mb-4">Portfolio Artifacts</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <!-- Artifact 1 Card -->
+      <div class="card bg-white shadow-md p-4">
+        <h3 class="text-lg font-semibold text-blue-700 mb-1">
+          <a href="dalle.html" class="hover:underline">Artifact 1: DALL·E – Teaching AI to Imagine</a>
+        </h3>
+        <p class="text-sm text-gray-700 mb-2">
+          A timeline and case analysis of DALL·E's evolution, applications, and limitations.
+        </p>
+        <ul class="text-sm text-gray-600 list-disc list-inside">
+          <li><strong>Tools:</strong> PowerPoint, AI prompts, documentation</li>
+          <li><strong>Value:</strong> Demonstrates critical thinking, tech literacy, and awareness of AI's industry impact</li>
+        </ul>
+      </div>
+
+      <!-- Artifact 2 Card -->
+      <div class="card bg-white shadow-md p-4">
+        <h3 class="text-lg font-semibold text-blue-700 mb-1">
+          <a href="bodyfat-model.html" class="hover:underline">Artifact 2: Body Fat Prediction using Machine Learning</a>
+        </h3>
+        <p class="text-sm text-gray-700 mb-2">
+          A hands-on project predicting body fat using supervised learning and regression techniques.
+        </p>
+        <ul class="text-sm text-gray-600 list-disc list-inside">
+          <li><strong>Tools:</strong> Python, Jupyter, Pandas, Matplotlib, Scikit-learn</li>
+          <li><strong>Value:</strong> Showcases end-to-end ML workflow including EDA, cleaning, modeling, and evaluation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-sm text-gray-500 p-4 mt-12 shadow-inner">
+    <p>&copy; 2025 Chaitali Rajurkar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
