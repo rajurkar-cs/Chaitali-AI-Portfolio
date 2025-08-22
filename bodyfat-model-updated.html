@@ -24,18 +24,12 @@
       font-size: 2.2rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
+      color: #fff;
     }
     
     header p {
       font-size: 1.1rem;
       margin: 0;
-    }
-
-    .header-title {
-      color: #fff;
-    }
-
-    .header-sub {
       color: #cbd5e0;
     }
 
@@ -71,14 +65,16 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <header class="p-6 mb-8">
+  <!-- HEADER: unified with other artifacts -->
+  <header>
     <div class="max-w-5xl mx-auto">
-      <h1 class="text-3xl font-bold header-title">Body Fat Prediction using Linear Regression</h1>
-      <p class="text-sm header-sub">A project predicting body fat using basic body measurements with linear regression modeling</p>
+      <h1>Body Fat Prediction using Linear Regression</h1>
+      <p>A project predicting body fat using basic body measurements with linear regression modeling</p>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4">
+  <!-- MAIN: add vertical padding -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
     <div class="content-section">
       <h2 class="section-title">Overview</h2>
       <p>This project applies linear regression to predict body fat percentage using weight and abdomen circumference. The goal is to develop a quick and cost-effective method to estimate body fat using common physical measurements.</p>
@@ -132,15 +128,15 @@
       <p class="text-sm text-gray-700">
         Despite expectations, removing outliers slightly reduced performance. This emphasized the importance of testing assumptions when cleaning data.
       </p>
-      </div>
+    </div>
 
-      <div class="content-section">
-        <h2 class="section-title">Figure: Actual vs Predicted Body Fat (After Removing Outliers)</h2>
-        <div class="flex justify-center my-4">
-          <img src="images/bodyfat_visual.png" alt="Prediction Plot Without Outliers" class="rounded shadow-md max-w-xl w-full">
-        </div>
-        <p class="text-sm text-center text-gray-600 italic mt-2 mb-2">This scatterplot visualizes how predicted values align with actual body fat measurements after outlier removal.</p>
+    <div class="content-section">
+      <h2 class="section-title">Figure: Actual vs Predicted Body Fat (After Removing Outliers)</h2>
+      <div class="flex justify-center my-4">
+        <img src="images/bodyfat_visual.png" alt="Prediction Plot Without Outliers" class="rounded shadow-md max-w-xl w-full">
       </div>
+      <p class="text-sm text-center text-gray-600 italic mt-2 mb-2">This scatterplot visualizes how predicted values align with actual body fat measurements after outlier removal.</p>
+    </div>
     
     <div class="content-section">
       <h2 class="section-title">Tools Used</h2>
