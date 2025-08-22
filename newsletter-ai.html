@@ -12,6 +12,8 @@
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      line-height: 1.65;
+      color: #0e1b2a;
     }
     header {
       background: linear-gradient(to bottom right, #003c5f, #001e2e);
@@ -41,6 +43,8 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
     }
+    a { color:#0f7ae5; text-decoration:none; }
+    a:hover { text-decoration:underline; }
     footer {
       background-color: #f8fafc;
     }
@@ -48,7 +52,7 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header>
     <div class="max-w-5xl mx-auto">
       <h1>AI at Work: How Tech is Transforming Earth, Health, and Finance</h1>
@@ -56,7 +60,7 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="max-w-5xl mx-auto px-4 py-10">
 
     <!-- Overview -->
@@ -65,49 +69,100 @@
       <p>
         This artifact explores three industries where AI is already transforming decision-making and operations: 
         earth science, healthcare, and finance. It is written in a newsletter format for a general professional 
-        audience, blending business impact with accessible explanations.
+        audience, blending business impact with accessible explanations and inline sources.
       </p>
     </div>
 
-    <!-- Earth Science -->
+    <!-- Objective -->
     <div class="content-section">
-      <h2 class="section-title">🌍 Earth Science: Digging Smarter with KoBold Metals</h2>
-      <p><strong>What’s new:</strong> KoBold Metals uses AI to analyze geological and geophysical data, predicting mineral-rich zones. 
-      Reports show AI-driven drill success rates rising from ~0.5% historically to nearly 75% in early commercial cases (Cleantech Group, 2025).</p>
-      <p><strong>Why it matters:</strong> Efficient mineral discovery is vital for renewable energy supply chains, reducing the trial-and-error costs of mining exploration.</p>
-      <p><strong>Business impact:</strong> Backed by Bill Gates and Jeff Bezos, KoBold is drilling globally to secure critical EV and grid-storage resources. AI enables faster, cheaper, and greener discovery.</p>
+      <h2 class="section-title">Objective</h2>
+      <p>
+        Communicate how AI is transforming business across three industries using a concise newsletter format, with a clear
+        framing (<em>what’s new → why it matters → business impact</em>) and verifiable sources for non-technical stakeholders.
+      </p>
     </div>
 
-    <!-- Healthcare -->
+    <!-- Key Highlights -->
     <div class="content-section">
-      <h2 class="section-title">🏥 Healthcare: Ant Group’s AQ App Brings Care to Millions</h2>
-      <p><strong>What’s new:</strong> Ant Group’s AQ app reached 100 million users within weeks of its June 2025 launch (Business Wire, 2025). 
-      It provides AI-driven triage, health Q&A, and appointment support.</p>
-      <p><strong>Why it matters:</strong> Instead of replacing doctors, AQ acts as a digital front line, helping manage patient flow and 
-      reducing hospital overload.</p>
-      <p><strong>Business impact:</strong> Millions of doctor visits have been streamlined, improving healthcare access in underserved regions and 
-      enhancing system efficiency.</p>
+      <h2 class="section-title">Key Highlights</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><strong>Earth Science:</strong> KoBold Metals uses ML to prioritize drill targets for critical minerals; early cases report success rates near 75% (vs. ~0.5% historical).</li>
+        <li><strong>Healthcare:</strong> Ant Group’s AQ reached 100M users weeks after launch; AI triage scales front-line guidance and reduces load on clinics.</li>
+        <li><strong>Finance:</strong> Anthropic’s Claude for Financial Services integrates with Snowflake, S&amp;P Global, and Databricks; accelerates compliance and risk review.</li>
+      </ul>
     </div>
 
-    <!-- Finance -->
+    <!-- Value Proposition -->
     <div class="content-section">
-      <h2 class="section-title">💰 Finance: Anthropic’s Claude Tackles Risk & Compliance</h2>
-      <p><strong>What’s new:</strong> Claude for Financial Services integrates with Snowflake, S&P Global, and Databricks, with features 
-      like Claude Code to assist analysts (Anthropic, 2025; ThoughtWorks, 2025).</p>
-      <p><strong>Why it matters:</strong> Compliance failures and fraud risks are costly. Claude reviews massive volumes of filings quickly, 
-      reducing missed red flags.</p>
-      <p><strong>Business impact:</strong> Financial firms benefit from faster reporting cycles, reduced manual review time, and more robust 
-      compliance oversight.</p>
+      <h2 class="section-title">Value Proposition</h2>
+      <p>
+        This artifact demonstrates audience-aware communication: translating AI developments into business impact
+        with sources, consistency, and ethical awareness. It complements technical projects by showing product sense,
+        clarity, and leadership communication skills.
+      </p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="content-section">
+      <h2 class="section-title">Newsletter</h2>
+
+      <h3 class="text-xl font-semibold mb-2">🌍 Earth Science: Digging Smarter with KoBold Metals</h3>
+      <p>
+        Mining has been expensive, risky, and slow. KoBold Metals applies machine learning to geological, geophysical,
+        and geochemical datasets to prioritize drill targets for minerals used in batteries and grid storage.
+      </p>
+      <p>
+        <strong>What’s new:</strong> According to Cleantech Group (2025),
+        early commercial results report drill success rates rising from historic norms near <em>~0.5%</em> to
+        <em>~75%</em> when AI guides targeting 
+        (<a href="https://www.cleantech.com/rock-solid-ai-how-digital-tools-are-unearthing-a-new-era-of-mining-exploration/" target="_blank" rel="noopener">Cleantech Group, 2025</a>).
+      </p>
+      <p><strong>Why it matters:</strong> More precise exploration lowers cost and environmental impact and stabilizes EV and grid-storage supply chains.</p>
+      <p><strong>Business impact:</strong> Backed by leading climate investors, KoBold is actively drilling projects in Africa and beyond.</p>
+      <p><strong>Takeaway:</strong> AI is moving exploration from trial-and-error to evidence-driven targeting.</p>
+
+      <hr class="my-6"/>
+
+      <h3 class="text-xl font-semibold mb-2">🏥 Healthcare: Ant Group’s AQ App Brings Care to Millions</h3>
+      <p>
+        Ant Group launched <em>AQ</em>, a mobile health manager that uses AI to deliver triage, guidance, and access to
+        services within the Alipay ecosystem.
+      </p>
+      <p>
+        <strong>What’s new:</strong> Business Wire reports AQ surpassed <em>100 million users</em> shortly after its June 2025
+        public rollout 
+        (<a href="https://www.businesswire.com/news/home/20250728416057/en/Ant-Groups-AI-Healthcare-Manager-AQ-Hits-100-Million-Users-Accelerating-Tech-Inclusion-Through-AI-Powered-Innovations" target="_blank" rel="noopener">Business Wire, 2025</a>).
+      </p>
+      <p><strong>Why it matters:</strong> AI-assisted triage can reduce pressure on hospitals while giving people faster, credible answers for common conditions.</p>
+      <p><strong>Business impact:</strong> Streamlined patient flows, improved access in underserved areas, and a scalable model for preventative care.</p>
+      <p><strong>Takeaway:</strong> AI can expand access without replacing clinicians.</p>
+
+      <hr class="my-6"/>
+
+      <h3 class="text-xl font-semibold mb-2">💰 Finance: Anthropic’s Claude Tackles Risk & Compliance</h3>
+      <p>
+        Financial institutions are piloting Anthropic’s sector-specific offering to summarize filings, support due diligence,
+        and monitor compliance.
+      </p>
+      <p>
+        <strong>What’s new:</strong> The official product page confirms integrations with Snowflake, S&amp;P Global,
+        and Databricks, plus features like Claude Code for analysts 
+        (<a href="https://www.anthropic.com/news/claude-for-financial-services" target="_blank" rel="noopener">Anthropic, 2025</a>; 
+        <a href="https://www.thoughtworks.com/en-us/insights/blog/generative-ai/claude-financial-services-what-need-know" target="_blank" rel="noopener">ThoughtWorks, 2025</a>).
+      </p>
+      <p><strong>Why it matters:</strong> Missed red flags are expensive. AI accelerates review while improving coverage and auditability.</p>
+      <p><strong>Business impact:</strong> Faster reporting cycles, lower manual effort, and stronger risk controls.</p>
+      <p><strong>Takeaway:</strong> In finance, speed + quality = edge. AI delivers both.</p>
     </div>
 
     <!-- Reflection -->
     <div class="content-section">
       <h2 class="section-title">Reflection</h2>
       <p>
-        Creating this artifact helped me practice translating AI innovation into clear business outcomes. By structuring 
-        each section around <em>what’s new, why it matters, and business impact</em>, I highlighted not just the technology but 
-        its real-world significance. This complements my technical artifacts by showing my ability to communicate AI 
-        developments to a broad audience.
+        Creating this artifact strengthened my ability to translate technical advances into business outcomes while keeping
+        credibility front and center. Structuring each section around <em>what’s new, why it matters, and business impact</em>
+        highlighted the practical relevance of AI for non-technical readers. This complements my technical artifacts by
+        demonstrating communication, synthesis, and audience-aware storytelling—skills essential for AI/ML leadership.
       </p>
     </div>
 
@@ -115,14 +170,34 @@
     <div class="content-section">
       <h2 class="section-title">References</h2>
       <ul class="list-disc list-inside text-gray-700">
-        <li>Cleantech Group. (2025, July 7). <em>Rock-solid AI: How digital tools are unearthing a new era of mining exploration</em>. https://www.cleantech.com/rock-solid-ai-how-digital-tools-are-unearthing-a-new-era-of-mining-exploration/</li>
-        <li>Business Wire. (2025, July 28). <em>Ant Group’s AI healthcare manager AQ hits 100 million users</em>. https://www.businesswire.com/news/home/20250728416057/en/Ant-Groups-AI-Healthcare-Manager-AQ-Hits-100-Million-Users-Accelerating-Tech-Inclusion-Through-AI-Powered-Innovations</li>
-        <li>Anthropic. (2025, July 15). <em>Claude for financial services</em>. https://www.anthropic.com/news/claude-for-financial-services</li>
-        <li>ThoughtWorks. (2025, July 17). <em>Claude for financial services: What you need to know</em>. https://www.thoughtworks.com/en-us/insights/blog/generative-ai/claude-financial-services-what-need-know</li>
+        <li>
+          Cleantech Group. (2025, July 7).
+          <em>Rock-solid AI: How digital tools are unearthing a new era of mining exploration</em>.
+          <a href="https://www.cleantech.com/rock-solid-ai-how-digital-tools-are-unearthing-a-new-era-of-mining-exploration/"
+             target="_blank" rel="noopener">https://www.cleantech.com/rock-solid-ai-how-digital-tools-are-unearthing-a-new-era-of-mining-exploration/</a>
+        </li>
+        <li>
+          Business Wire. (2025, July 28).
+          <em>Ant Group’s AI healthcare manager AQ hits 100 million users</em>.
+          <a href="https://www.businesswire.com/news/home/20250728416057/en/Ant-Groups-AI-Healthcare-Manager-AQ-Hits-100-Million-Users-Accelerating-Tech-Inclusion-Through-AI-Powered-Innovations"
+             target="_blank" rel="noopener">https://www.businesswire.com/news/home/20250728416057/en/Ant-Groups-AI-Healthcare-Manager-AQ-Hits-100-Million-Users-Accelerating-Tech-Inclusion-Through-AI-Powered-Innovations</a>
+        </li>
+        <li>
+          Anthropic. (2025, July 15).
+          <em>Claude for financial services</em>.
+          <a href="https://www.anthropic.com/news/claude-for-financial-services"
+             target="_blank" rel="noopener">https://www.anthropic.com/news/claude-for-financial-services</a>
+        </li>
+        <li>
+          ThoughtWorks. (2025, July 17).
+          <em>Claude for financial services: What you need to know</em>.
+          <a href="https://www.thoughtworks.com/en-us/insights/blog/generative-ai/claude-financial-services-what-need-know"
+             target="_blank" rel="noopener">https://www.thoughtworks.com/en-us/insights/blog/generative-ai/claude-financial-services-what-need-know</a>
+        </li>
       </ul>
     </div>
 
-    <!-- Back Link -->
+    <!-- Back -->
     <div class="text-left mt-6">
       <a href="index.html" class="text-blue-600 hover:underline">&larr; Back to Portfolio Home</a>
     </div>
